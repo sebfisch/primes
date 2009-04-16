@@ -1,0 +1,31 @@
+Name:          primes
+Version:       0.1
+Cabal-Version: >= 1.6
+Synopsis:      Efficient, purely functional generation of prime numbers
+Description:   
+
+  This Haskell library provides an efficient lazy wheel sieve for
+  prime generation ispired by "Lazy wheel sieves and spirals of
+  primes" by Colin Runciman and "The Genuine Sieve of Eratosthenes" by
+  Melissa O'Neil.
+
+Category:      Algorithms, Numerical
+License:       PublicDomain
+License-File:  LICENSE
+Author:        Sebastian Fischer
+Maintainer:    Sebastian Fischer
+Bug-Reports:   mailto:sebf@informatik.uni-kiel.de
+Homepage:      http://github.com/sebfisch/primes
+Build-Type:    Simple
+Stability:     experimental
+
+Extra-Source-Files: README
+
+Library
+  Build-Depends:    base
+  Exposed-Modules:  Data.Numbers.Primes
+  Ghc-Options:      -Wall -fno-warn-incomplete-patterns
+
+Source-Repository head
+  type:     git
+  location: git://github.com/sebfisch/primes.git
