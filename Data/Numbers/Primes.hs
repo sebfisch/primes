@@ -50,9 +50,9 @@ wheelSieve k = reverse ps ++ sieve (spin p (cycle ns)) Empty
 sieve :: [Integer] -> Queue -> [Integer] 
 sieve (n:ns) Empty = n : sieve ns (enqueue (map (n*) (n:ns)) Empty) 
 sieve (n:ns) queue 
-  | m == n         = sieve ns (enqueue ms q) 
-  | m < n          = sieve (n:ns) (enqueue ms q) 
-  | otherwise      = n : sieve ns (enqueue (map (n*) (n:ns)) queue) 
+  | m == n      = sieve ns (enqueue ms q) 
+  | m < n       = sieve (n:ns) (enqueue ms q) 
+  | otherwise   = n : sieve ns (enqueue (map (n*) (n:ns)) queue) 
  where (m:ms,q) = dequeue queue 
 
 -- A wheel consists of a list of primes whose multiples are canceled
@@ -75,9 +75,8 @@ wheel n = iterate next ([2],[1]) !! n
 
 next :: Wheel -> Wheel
 next (ps@(p:_),xs) = (py:ps,cancel (product ps) p py ys)
- where
-  (y:ys) = cycle xs
-  py = p + y
+ where (y:ys) = cycle xs
+       py = p + y
 
 cancel :: Integer -> Integer -> Integer -> [Integer] -> [Integer]
 cancel 0 _ _ _ = []
@@ -111,4 +110,3 @@ dequeue (Fork ns qs) = (ns,mergeAll qs)
 mergeAll :: [Queue] -> Queue
 mergeAll [] = Empty; mergeAll [x] = x 
 mergeAll (x:y:qs) = merge (merge x y) (mergeAll qs)
-
