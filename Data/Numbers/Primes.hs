@@ -88,7 +88,7 @@ cancel m p n (x:ys@(y:zs))
 
 
 -- We use a special version of priority queues implemented as "pairing
--- heaps" ((see "Purely functional datastructures by Chris Okasaki).
+-- heaps" (see "Purely functional datastructures by Chris Okasaki).
 --
 -- The queue stores non-empty lists of multiples; the first element is
 -- used as priority.
