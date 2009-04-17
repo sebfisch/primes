@@ -9,12 +9,10 @@
 -- 
 -- This Haskell library provides an efficient lazy wheel sieve for
 -- prime generation inspired by /Lazy wheel sieves and spirals of/
--- /primes/ [1] by Colin Runciman and /The Genuine Sieve of/
--- /Eratosthenes/ [2] by Melissa O'Neil.
--- 
--- [1]: <http://www.cs.york.ac.uk/ftpdir/pub/colin/jfp97lw.ps.gz>
--- 
--- [2]: <http://www.cs.hmc.edu/~oneill/papers/Sieve-JFP.pdf>
+-- /primes/ by Colin Runciman
+-- (<http://www.cs.york.ac.uk/ftpdir/pub/colin/jfp97lw.ps.gz>) and
+-- /The Genuine Sieve of Eratosthenes/ by Melissa O'Neil
+-- (<http://www.cs.hmc.edu/~oneill/papers/Sieve-JFP.pdf>).
 -- 
 module Data.Numbers.Primes ( primes, wheelSieve ) where
 
