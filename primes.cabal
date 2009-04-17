@@ -5,9 +5,9 @@ Synopsis:      Efficient, purely functional generation of prime numbers
 Description:   
 
   This Haskell library provides an efficient lazy wheel sieve for
-  prime generation ispired by "Lazy wheel sieves and spirals of
-  primes" by Colin Runciman and "The Genuine Sieve of Eratosthenes" by
-  Melissa O'Neil.
+  prime generation inspired by /Lazy wheel sieves and spirals of/
+  /primes/ by Colin Runciman and /The Genuine Sieve of Eratosthenes/
+  by Melissa O'Neil.
 
 Category:      Algorithms, Numerical
 License:       PublicDomain
