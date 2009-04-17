@@ -2,7 +2,7 @@ Name:          primes
 Version:       0.1
 Cabal-Version: >= 1.6
 Synopsis:      Efficient, purely functional generation of prime numbers
-Description:   
+Description:
 
   This Haskell library provides an efficient lazy wheel sieve for
   prime generation inspired by /Lazy wheel sieves and spirals of/
