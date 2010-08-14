@@ -1,5 +1,5 @@
 Name:          primes
-Version:       0.1.1.1
+Version:       0.2
 Cabal-Version: >= 1.6
 Synopsis:      Efficient, purely functional generation of prime numbers
 Description:
@@ -19,13 +19,12 @@ Homepage:      http://github.com/sebfisch/primes
 Build-Type:    Simple
 Stability:     experimental
 
-Extra-Source-Files: README, runtime.hs, memory.hs
+Extra-Source-Files: README
 
 Library
   Build-Depends:    base == 4.*
   Exposed-Modules:  Data.Numbers.Primes
   Ghc-Options:      -Wall -fno-warn-incomplete-patterns
-                    -funbox-strict-fields
 
 Source-Repository head
   type:     git
