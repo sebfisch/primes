@@ -1,5 +1,5 @@
 Name:          primes
-Version:       0.2
+Version:       0.1.1.1
 Cabal-Version: >= 1.6
 Synopsis:      Efficient, purely functional generation of prime numbers
 Description:
