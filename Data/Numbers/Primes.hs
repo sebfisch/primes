@@ -1,7 +1,7 @@
 -- |
 -- Module      : Data.Numbers.Primes
 -- Copyright   : Sebastian Fischer
--- License     : PublicDomain
+-- License     : BSD3
 -- 
 -- Maintainer  : Sebastian Fischer (sebf@informatik.uni-kiel.de)
 -- Stability   : experimental
@@ -66,7 +66,7 @@ type Composites = (Queue,[[Integer]])
 -- 
 composites :: Integer -> [Integer] -> Composites
 composites p ns = (Empty, map comps (spin p ns : sieve p ns))
- where comps xs = map (head xs*) xs
+ where comps xs@(x:_) = map (x*) xs
 
 -- We can split all composites into the next and remaining
 -- composites. We use the feeder when appropriate and discard equal
