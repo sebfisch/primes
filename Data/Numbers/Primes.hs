@@ -52,14 +52,14 @@ wheelSieve k = reverse ps ++ map head (sieve p (cycle ns))
 {-# SPECIALISE wheelSieve :: Int -> [Integer] #-}
 
 -- |
--- Checks whether a given positive number is prime.
+-- Checks whether a given number is prime.
 -- 
 -- This function uses trial division to check for divisibility with
 -- all primes below the square root of the given number. It is
 -- impractical for numbers with a very large smallest prime factor.
 -- 
 isPrime :: Integral int => int -> Bool
-isPrime n = primeFactors n == [n]
+isPrime n = n > 1 && primeFactors n == [n]
 
 {-# SPECIALISE isPrime :: Int     -> Bool #-}
 {-# SPECIALISE isPrime :: Integer -> Bool #-}
