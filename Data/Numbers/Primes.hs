@@ -59,7 +59,8 @@ wheelSieve k = reverse ps ++ map head (sieve p (cycle ns))
 -- impractical for numbers with a very large smallest prime factor.
 -- 
 isPrime :: Integral int => int -> Bool
-isPrime n = n > 1 && primeFactors n == [n]
+isPrime n | n > 1     = primeFactors n == [n]
+          | otherwise = False
 
 {-# SPECIALISE isPrime :: Int     -> Bool #-}
 {-# SPECIALISE isPrime :: Integer -> Bool #-}
